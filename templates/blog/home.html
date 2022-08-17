@@ -7,12 +7,22 @@
   {% if post.status %}
     <a href="{% url 'blog:post_detail' post.slug %}">
       <ul class="card">
-        <li class="card-item"><h1>{{ post.title }}</h1></li>
-        <li class="card-item"><p>{{ post.content }}</p></li>
-        <li class="card-item"><p>{{ post.updated_on|to_jalali:"%Y/%m/%d" }}</p></li>
+        <div class="card-header">
+          <li><h1>{{ post.title }}</h1></li>
+          <div class="author-date">
+            <li class="flex"><p>{{ post.author.username }}</p></li>
+            <li class="flex"><p>{{ post.updated_on|to_jalali:"%Y/%m/%d" }}</p></li>
+          </div>
+          <li class="tags">
+            {% for tag in post.tags.all %}
+              <p class="tag">{{ tag.name }}</p>
+            {% endfor %}
+          </li> <!-- end of tags -->
+        </div>
+        <li><p>{{ post.content }}</p></li>
       </ul>
     </a>
   {% endif %}
-  {% endfor %}
+{% endfor %}
 </section>
 {% endblock content %}

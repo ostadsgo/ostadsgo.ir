@@ -53,6 +53,20 @@ hr {
   height: 2px;
   border: none;
 }
+ul {
+
+  list-style-type: none;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar {
   padding: .2rem 0;
@@ -87,10 +101,37 @@ hr {
   gap: 1.5rem;
 }
 .card {
-  list-style-type: none;
-  padding: 1.5rem 2rem;
-}
-.card-item {
-  color: var(--txt-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+  align-items: center;
 }
 
+.card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.author-date {
+  display: flex;
+}
+.author-date > li:first-child::after {
+  content: '|';
+  margin: 0 5px;
+  font-weight: 800;
+}
+
+.tags {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+}
+
+.tag {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: .70rem;
+  font-weight: 800;
+}
