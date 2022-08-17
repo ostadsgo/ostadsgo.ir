@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rg-font: 'Noto Sans Arabic';
+  --bg-color: "#F0EBE3";
+  --txt-color: #212121;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: var(--rg-font);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem auto;
+  max-width: 57rem;
+  padding-top: 1rem; 
+}
+
+.card {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+}
+.card-item {
+  color: var(--txt-color);
+}

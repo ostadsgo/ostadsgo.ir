@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block title %}وبلاگ سعید غلامی{% endblock title %}
+{% block content %}
+<section class="cards">
+{% for post in posts %}
+  <a href="#">
+    <ul class="card">
+      <li class="card-item"><h1>{{ post.title }}</h1></li>
+      <li class="card-item"><p>{{ post.content }}</p></li>
+    </ul>
+  </a>
+  {% endfor %}
+</section>
+{% endblock content %}
