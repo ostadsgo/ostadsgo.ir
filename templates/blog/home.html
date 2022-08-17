@@ -1,4 +1,5 @@
 {% extends 'base.html' %} 
+{% load jalali_tags %}
 {% block title %}وبلاگ سعید غلامی{% endblock title %}
 {% block content %}
 <section class="cards">
@@ -8,7 +9,7 @@
       <ul class="card">
         <li class="card-item"><h1>{{ post.title }}</h1></li>
         <li class="card-item"><p>{{ post.content }}</p></li>
-        <li class="card-item"><p>{{ post.updated_on|date:"Y-m-d" }}</p></li>
+        <li class="card-item"><p>{{ post.updated_on|to_jalali:"%Y/%m/%d" }}</p></li>
       </ul>
     </a>
   {% endif %}

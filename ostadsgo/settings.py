@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # project apps
     "blog.apps.BlogConfig",
     # Third party apps
+    "jalali_date",
 ]
 
 MIDDLEWARE = [
