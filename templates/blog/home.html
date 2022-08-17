@@ -4,10 +4,11 @@
 <section class="cards">
 {% for post in posts %}
   {% if post.status %}
-    <a href="#">
+    <a href="{% url 'blog:post_detail' post.slug %}">
       <ul class="card">
         <li class="card-item"><h1>{{ post.title }}</h1></li>
         <li class="card-item"><p>{{ post.content }}</p></li>
+        <li class="card-item"><p>{{ post.updated_on|date:"Y-m-d" }}</p></li>
       </ul>
     </a>
   {% endif %}
