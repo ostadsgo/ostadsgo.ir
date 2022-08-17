@@ -12,6 +12,7 @@
   --rg-font: 'Noto Sans Arabic';
   --bg-color: "#F0EBE3";
   --txt-color: #212121;
+  --max-width: 57rem;
 }
 
 body {
@@ -25,20 +26,54 @@ a {
   text-decoration: none;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5rem auto;
-  max-width: 57rem;
-  padding-top: 1rem; 
+a:visited {
+  color: var(--txt-color);
 }
 
+hr {
+  background: rgb(245,155,240);
+  background: linear-gradient(90deg, rgba(245,155,240,1) 0%, rgba(195,113,204,1) 32%, rgba(129,124,208,1) 100%);
+  height: 2px;
+  border: none;
+}
+
+.navbar {
+  padding: .2rem 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.navbar > .logo {
+  font-weight: 800;
+}
+
+.social-links {
+  display: flex;
+  gap: .7rem;
+}
+
+.social-link {
+  color: var(--txt-color);
+}
+
+.main {
+  margin: 3rem auto;
+  max-width: var(--max-width);
+  padding-top: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .card {
   list-style-type: none;
-  margin-bottom: 1.5rem;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
 }
 .card-item {
   color: var(--txt-color);
 }
+

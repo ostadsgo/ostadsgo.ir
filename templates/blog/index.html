@@ -3,12 +3,14 @@
 {% block content %}
 <section class="cards">
 {% for post in posts %}
-  <a href="#">
-    <ul class="card">
-      <li class="card-item"><h1>{{ post.title }}</h1></li>
-      <li class="card-item"><p>{{ post.content }}</p></li>
-    </ul>
-  </a>
+  {% if post.status %}
+    <a href="#">
+      <ul class="card">
+        <li class="card-item"><h1>{{ post.title }}</h1></li>
+        <li class="card-item"><p>{{ post.content }}</p></li>
+      </ul>
+    </a>
+  {% endif %}
   {% endfor %}
 </section>
 {% endblock content %}
