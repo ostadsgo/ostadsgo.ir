@@ -39,8 +39,10 @@ h1, h2, h3 {
 p {
   line-height: 1.7;
 }
+
 a {
   text-decoration: none;
+  color: var(--txt-color);
 }
 
 a:visited {
@@ -100,6 +102,7 @@ ul {
   flex-direction: column;
   gap: 1.5rem;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -114,10 +117,10 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.author-date {
+.published-date {
   display: flex;
 }
-.author-date > li:first-child::after {
+.published-date > li:first-child::after {
   content: '|';
   margin: 0 5px;
   font-weight: 800;
@@ -125,13 +128,13 @@ ul {
 
 .tags {
   display: flex;
-  gap: .5rem;
+  gap: .15rem;
   justify-content: center;
 }
 
 .tag {
   padding: 3px 10px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: .70rem;
   font-weight: 800;
 }

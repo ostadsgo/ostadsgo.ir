@@ -9,7 +9,7 @@
       <ul class="card">
         <div class="card-header">
           <li><h1>{{ post.title }}</h1></li>
-          <div class="author-date">
+          <div class="published-date">
             <li class="flex"><p>{{ post.author.username }}</p></li>
             <li class="flex"><p>{{ post.updated_on|to_jalali:"%Y/%m/%d" }}</p></li>
           </div>
@@ -19,7 +19,7 @@
             {% endfor %}
           </li> <!-- end of tags -->
         </div>
-        <li><p>{{ post.content }}</p></li>
+        <li><p>{{ post.content|safe }}</p></li>
       </ul>
     </a>
   {% endif %}

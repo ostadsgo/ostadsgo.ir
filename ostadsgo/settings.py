@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     # Third party apps
     "jalali_date",
+    "tinymce",
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,19 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# TinyMC Configs
+TINYMCE_DEFAULT_CONFIG = {
+    "theme": "silver",
+    "height": 300,
+    "menubar": False,
+    "plugins": "advlist,autolink,lists,link,image,charmap,print,preview,anchor,"
+    "searchreplace,visualblocks,code,fullscreen,insertdatetime,media,table,paste,directionality,"
+    "code,help,wordcount",
+    "toolbar": "undo redo | formatselect |rtl ltr |"
+    "bold italic backcolor | alignleft aligncenter "
+    "alignright alignjustify | bullist numlist outdent indent | "
+    "removeformat | help",
+    "language": "fa_IR",
+}
